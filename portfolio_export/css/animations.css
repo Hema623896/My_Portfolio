@@ -1,0 +1,189 @@
+/* Custom animation for hero orbs */
+.animated-orb {
+  animation: float 3.5s ease-in-out infinite;
+}
+/* ===== ANIMATIONS & REVEAL ===== */
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.02); }
+}
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.5; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200,169,110,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(200,169,110,0); }
+}
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes counter-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+@keyframes nav-link-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes card-appear {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Reveal base states — hidden before animation */
+.reveal-up,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.reveal-up { transform: translateY(40px); }
+.reveal-left { transform: translateX(-60px); }
+.reveal-right { transform: translateX(60px); }
+
+/* Animated state */
+.reveal-up.animated {
+  animation: slide-in-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.reveal-left.animated {
+  animation: slide-in-left 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.reveal-right.animated {
+  animation: slide-in-right 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Stagger delays */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* Tilt card effect — handled in JS, CSS base */
+[data-tilt] { transform-style: preserve-3d; }
+
+/* Active dot pulse */
+.timeline-dot { animation: pulse-glow 2.5s ease-in-out infinite; }
+
+/* Navbar links animate in on load */
+.nav-link {
+  animation: nav-link-in 0.4s ease both;
+}
+.nav-links li:nth-child(1) .nav-link { animation-delay: 0.8s; }
+.nav-links li:nth-child(2) .nav-link { animation-delay: 0.9s; }
+.nav-links li:nth-child(3) .nav-link { animation-delay: 1.0s; }
+.nav-links li:nth-child(4) .nav-link { animation-delay: 1.1s; }
+.nav-links li:nth-child(5) .nav-link { animation-delay: 1.2s; }
+
+/* Shimmer on skill fill */
+.skill-fill.active {
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent-2) 50%,
+    var(--accent) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Project card appear on filter */
+.project-card {
+  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.35s, box-shadow 0.35s;
+}
+.project-card.hiding {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+.project-card.showing {
+  animation: card-appear 0.4s ease forwards;
+}
+
+/* Back to top hover */
+.back-to-top:hover {
+  animation: float 0.6s ease-in-out;
+}
+
+/* Form button loading */
+.btn-loading {
+  pointer-events: none;
+  opacity: 0.75;
+}
+.btn-loading span::after {
+  content: ' ●●●';
+  animation: shimmer 1s linear infinite;
+}
+
+/* Section entrance enhanced */
+.section-title {
+  background: linear-gradient(135deg, var(--text) 0%, rgba(232,232,240,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-title em {
+  background: linear-gradient(135deg, var(--accent), #e8c07a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: fade-in 0.5s ease both;
+}
+
+/* Testimonial slide transition */
+.testimonial-card {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.testimonial-card.entering {
+  animation: fade-in 0.4s ease forwards;
+}
+
+/* Hover lift utility */
+.lift:hover { transform: translateY(-4px); transition: transform 0.3s ease; }
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-orb { display: none; }
+}
