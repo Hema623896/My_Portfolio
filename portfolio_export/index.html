@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemavathi — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">Loading</span>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">HEMAVATHI S<span></span></a>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO / HOME SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1 animated-orb"></div>
+      <div class="hero-orb orb-2 animated-orb"></div>
+      <div class="hero-orb orb-3 animated-orb"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content creative-hero">
+      <!-- Circular Profile Image -->
+      <div class="hero-profile-wrap">
+        <div class="hero-profile-ring">
+          <div class="hero-profile-circle">
+            <img src="assets/image.jpeg" alt="Hemavathi" />
+          </div>
+        </div>
+        <div class="hero-status-dot"></div>
+      </div>
+
+      <!-- Name & Title -->
+      <div class="hero-text-block">
+        <h1 class="hero-name">Hemavathi</h1>
+        <p class="hero-role">Frontend Developer &amp; Java Enthusiast</p>
+        <p class="hero-tagline-wrap"><span class="hero-tagline"></span></p>
+      </div>
+
+      <!-- Social Icons Row -->
+      <div class="hero-social-icons">
+        <a href="https://github.com/Hema623896" class="hero-icon-btn" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hemavathi08" class="hero-icon-btn" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="hero-icon-btn" aria-label="LeetCode" title="LeetCode">
+          <i class="fas fa-code"></i>
+        </a>
+        <a href="#" class="hero-icon-btn" aria-label="HackerRank" title="HackerRank">
+          <i class="fab fa-hackerrank"></i>
+        </a>
+        <a href="mailto:yourname@gmail.com" class="hero-icon-btn" aria-label="Email" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="hero-cta-row">
+        <a href="#about" class="btn btn-primary">About Me</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Square Profile Image -->
+        <div class="about-image-wrap reveal-left">
+          <div class="about-img-square">
+            <img src="assets/image.jpeg" alt="Hemavathi — About" />
+          </div>
+          <div class="about-img-badge">
+            <i class="fas fa-circle-check"></i> Available for Internships
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <h2 class="section-title">About</h2>
+          <p class="about-desc">
+            I'm <strong>Hemavathi</strong>, a third-year B.Tech IT student passionate about frontend development, Java programming, and creating modern web applications. I enjoy designing responsive and user-friendly websites while continuously improving my skills in Java, JavaScript, and modern web technologies.
+          </p>
+          <p class="about-desc">
+            My interests include building clean user interfaces, developing dynamic web projects, and learning full stack development concepts. I'm currently focused on strengthening my problem-solving abilities and creating projects that help me grow as a future software developer.
+          </p>
+
+          <!-- About Stats -->
+          <div class="about-stats-row">
+            <div class="about-stat">
+              <span class="about-stat-num">3rd</span>
+              <span class="about-stat-label">Year B.Tech</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num">4+</span>
+              <span class="about-stat-label">Projects Built</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num">2027</span>
+              <span class="about-stat-label">Graduating</span>
+            </div>
+          </div>
+
+          <div class="about-tags">
+            <span class="tag"><i class="fab fa-java"></i> Java</span>
+            <span class="tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+            <span class="tag"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tag"><i class="fab fa-react"></i> React</span>
+            <span class="tag"><i class="fas fa-code-branch"></i> REST APIs</span>
+            <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+          </div>
+          <!-- <a href="assets/Hemavathi_Resume(1).pdf" class="btn btn-primary mt-2" download="Hemavathi_Resume(1).pdf">
+            <i class="fas fa-download"></i> Download Resume
+          </a> -->
+          <a href="assets/Hemavathi_Resume.pdf" class="btn btn-primary mt-2" download>
+  <i class="fas fa-download"></i> Download Resume
+</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">My Toolkit</p>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up delay-1" data-tilt>
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3>HTML</h3>
+          <p>Semantic HTML5 & accessibility basics</p>
+        </div>
+        <div class="skill-card reveal-up delay-2" data-tilt>
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3>CSS</h3>
+          <p>Responsive layouts, Flexbox & Grid</p>
+        </div>
+        <div class="skill-card reveal-up delay-3" data-tilt>
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <h3>JavaScript</h3>
+          <p>ES6+, DOM manipulation, Fetch API</p>
+        </div>
+        <div class="skill-card reveal-up delay-4" data-tilt>
+          <div class="skill-icon"><i class="fab fa-java"></i></div>
+          <h3>Java</h3>
+          <p>Core Java, OOP fundamentals</p>
+        </div>
+        <div class="skill-card reveal-up delay-1" data-tilt>
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3>SQL</h3>
+          <p>MySQL queries & basic schema design</p>
+        </div>
+        <div class="skill-card reveal-up delay-2" data-tilt>
+          <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+          <h3>Git</h3>
+          <p>Version control, branching & collaboration</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card left-flow">
+            
+            <h3>Deepfake Detection System</h3>
+            <p class="timeline-company"><i class="fas fa-microchip"></i> AI / Machine Learning</p>
+            <p>Developed an AI-based Deepfake Detection system capable of identifying manipulated media using machine learning techniques. Focused on detecting fake visual content by analyzing image patterns and improving digital media authenticity verification.</p>
+            <div class="timeline-tags">
+              <span><i class="fab fa-python"></i> Python</span>
+              <span><i class="fas fa-eye"></i> OpenCV</span>
+              <span><i class="fas fa-robot"></i> Machine Learning</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+           
+            <h3>Weather Application</h3>
+            <p class="timeline-company"><i class="fas fa-globe"></i> Web Development</p>
+            <p>Built a responsive weather application that provides real-time weather updates, temperature details, humidity, and forecast information using weather APIs. Designed with a clean and user-friendly interface for seamless user experience.</p>
+            <div class="timeline-tags">
+              <span><i class="fab fa-html5"></i> HTML</span>
+              <span><i class="fab fa-css3-alt"></i> CSS</span>
+              <span><i class="fab fa-js"></i> JavaScript</span>
+              <span><i class="fas fa-cloud"></i> Weather API</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card left-flow">
+            
+            <h3>Movie Recommendation System</h3>
+            <p class="timeline-company"><i class="fas fa-film"></i> AI / ML</p>
+            <p>Designed and developed a Movie Recommendation System that suggests movies based on user preferences and similarity analysis. Focused on improving user experience through personalized content recommendations.</p>
+            <div class="timeline-tags">
+              <span><i class="fab fa-python"></i> Python</span>
+              <span><i class="fas fa-robot"></i> ML Algorithms</span>
+              <span><i class="fas fa-star"></i> Collaborative Filtering</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            
+            <h3>Bus Booking System</h3>
+            <p class="timeline-company"><i class="fas fa-bus"></i> Web Development</p>
+            <p>Developed a web-based Bus Booking System allowing users to search routes, book tickets, and manage travel details efficiently. Includes user-friendly interfaces and streamlined booking functionality for better travel management.</p>
+            <div class="timeline-tags">
+              <span><i class="fab fa-java"></i> Java</span>
+              <span><i class="fab fa-html5"></i> HTML/CSS</span>
+              <span><i class="fas fa-database"></i> MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">My Journey</p>
+        <h2 class="section-title">Education &amp; <em>Background</em></h2>
+        <!-- <p class="section-subtitle">My academic journey and performance over the years.</p> -->
+      </div>
+      <div class="experience-grid">
+        <div class="edu-row">
+          <div class="timeline-card">
+            <span class="timeline-date">Current</span>
+            <h3>B.Tech Information Technology</h3>
+            <p class="timeline-company"><i class="fas fa-university"></i> Currently studying B.Tech IT</p>
+          </div>
+          <div class="stats-card college-card">
+            <h4>B.Tech Information Technology</h4>
+            <div class="stat-row">
+              <span class="stat-value">8.12</span>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width:81.2%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-row">
+          <div class="timeline-card">
+            <span class="timeline-date">March 2018</span>
+            <h3>12th Standard (PCMB)</h3>
+            <p class="timeline-company"><i class="fas fa-school"></i> Sri Venkateswara Matriculation Higher Secondary School</p>
+          </div>
+          <div class="stats-card">
+            <h4>12th Standard</h4>
+            <div class="stat-row">
+              <span class="stat-value">82%</span>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width:82%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-row">
+          <div class="timeline-card">
+            <span class="timeline-date">March 2016</span>
+            <h3>10th Standard</h3>
+            <p class="timeline-company"><i class="fas fa-school"></i> Sri Venkateswara Matriculation Higher Secondary School</p>
+          </div>
+          <div class="stats-card">
+            <h4>10th Standard</h4>
+            <div class="stat-row">
+              <span class="stat-value">100%</span>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width:100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Reach Out</p>
+        <h2 class="section-title">Get In <em>Touch</em></h2>
+      </div>
+      <div class="contact-pro-grid">
+        <div class="contact-pro-form-wrap reveal-right">
+          <form class="contact-pro-form" id="contactProForm">
+            <div class="contact-pro-form-group">
+              <label for="fullname"><i class="fas fa-user"></i> Full Name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Your Full Name" required />
+            </div>
+            <div class="contact-pro-form-group">
+              <label for="pro-email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="pro-email" name="pro-email" placeholder="your@email.com" required />
+            </div>
+            <div class="contact-pro-form-group">
+              <label for="pro-subject"><i class="fas fa-tag"></i> Subject</label>
+              <input type="text" id="pro-subject" name="pro-subject" placeholder="Subject" />
+            </div>
+            <div class="contact-pro-form-group">
+              <label for="pro-message"><i class="fas fa-comment-dots"></i> Message</label>
+              <textarea id="pro-message" name="pro-message" rows="5" placeholder="Type your message..." required></textarea>
+            </div>
+            <button type="submit" class="contact-pro-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccessPro">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p style="margin:0; width:100%; text-align:center; color:var(--text-muted);">© 2026 Hemavathi. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
